@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.301);
+  padding: 8%;
+}
+
+h1 {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  color: rgb(110, 110, 110);
+  padding-bottom: 100px;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-container {
+  flex-grow: 1;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 30px;
+}
+
+.carousel {
+  margin-top: 25px;
+  position: absolute;
+  display: flex;
+}
+
+.slide {
+  max-width: 80%;
+  transition: all 0.5s;
+  margin: 0 10px;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide:hover {
+  box-shadow: 10px 10px 20px grey;
+  scale: 1.1;
+  transition: all 0.5s;
+  z-index: 100;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.356);
+  font-weight: bold;
+  padding: 8px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn:hover {
+  scale: 1.2;
+  transition: all 0.2s;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #555;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.226);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  color: white;
+}
