@@ -1,7 +1,7 @@
 
 const BACKEND_HOST = "http://localhost:5000"
 
-const dimensions = { height: 300, width: 350 }
+const dimensions = { height: 300, width: 320 }
 const total = 10 // max: 20
 
 
@@ -28,14 +28,14 @@ window.onload = async () => {
       dotItems += `<span class="dot ${ idx === currIdx && "active" }"></span>`
     })
     // <div class="overlay">${ item.title }</div>
-
+    // for attaching images and buttons to html containers
     carousel.insertAdjacentHTML("afterbegin", slideItems)
     dotsContainer.insertAdjacentHTML("afterbegin", dotItems)
   } catch (err) {
     console.log(err)
     alert("Server error!")
   }
-
+  // setting 
   carouselContainer.style.height = `${ dimensions.height + 100 }px`;
 
   const slides = document.querySelectorAll(".slide");
